@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="http://www.yushpet.com/templets/yush/js/redirect.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.seotitle /}</title>
+<meta name="Keywords" Content="{dede:field.keywords/}">
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel="stylesheet" type="text/css" href="http://www.yushpet.com/templets/yush/css/style.css"  />
+<link rel="stylesheet" type="text/css" href="http://www.yushpet.com/templets/yush/css/animate.min.css">
+<link rel="stylesheet" href="http://www.yushpet.com/templets/yush/font/iconfont.css">
+<!-- <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script> -->
+</head>
+<body class="dowebok"><script src="http://www.yushpet.com/templets/yush/demos/googlegg.js"></script>
+{dede:include filename="head.htm"/}
+</div>发
+</div>
+
+<!--头部结束-->
+<div style=" background-repeat: no-repeat;position: center; background-size: cover;position: relative;z-index: 2;width: 100%;background: #fff; padding-top:100px;">
+<div class="con-box ">
+  <div class="com-text animate" data-animate="fadeInRight" data-duration="0.5s" data-delay="0.2s">
+    <h2 title="养猫经验，宠物猫饲养，如何养猫">雅适课堂</h2>
+    <p>yush Classroom</p>
+  </div>
+</div>
+<!-- 雅适课堂 -->
+
+<div class="wrapper" title="宠物猫饲养，猫粮选择，怎么养猫">
+	<div class="position_map"><strong>当前位置:</strong> {dede:field name='position'/} </div>
+
+	<div class="newstitem " style="visibility: visible;"><!-- 列表循环 -->		  
+			 {dede:list pagesize='10'}
+				  <div class="news_wrapper">		  
+					<div class="newsbody">
+					  <p class="date"><span class="year">[field:pubdate function='strftime("%m-%d",@me)'/]</span><span class="md">[field:pubdate function='strftime("%Y",@me)'/]</span> <i class="icon iconfont icon-yuedu" style="color:#cccccc;"> 　[field:click/] </i></p>
+					  <p class="title" title="[field:title/]" ><a href="[field:arcurl/]"  target="_black" >[field:title/]</a></p>
+					  <div class="separator"></div>
+					  <p class="description"><a href="[field:arcurl/]"  target="_black" >[field:description/]……</a></p>
+					 
+					</div>
+					 <a href="[field:arcurl/]"  target="_black" alt="雅适猫粮、雅适猫砂、猫粮、猫砂" title="猫粮怎么选择，猫砂怎么选择，猫罐头怎么选择……" ><img class="newsimg" src="[field:litpic/]"/></a>
+				  </div>  
+			{/dede:list}	
+			
+	</div><!-- 列表结束 -->
+          <!-- pages-->
+        <div id="pages">
+			<script>
+			var listsize="";
+			  if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+					list_size = "1";
+				} else {
+					list_size = "5";
+				}
+			</script>
+			{dede:pagelist listitem="pre,next,pageno" listsize="list_size"/}
+        </div>
+		
+		
+ </div>
+
+
+{dede:include filename="footer.htm"/}

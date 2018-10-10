@@ -1,0 +1,127 @@
+﻿<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="Keywords" Content="{dede:field.keywords/}">
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/amazeui.min.css">
+  <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/app.css">
+  <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/fonts/iconfont.css">
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 不提供支持。 请 <a
+  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+  <header data-am-sticky data-am-widget="header"
+          class="am-header am-header-default">
+      <div class="am-header-left am-header-nav">
+          <a href="http://www.yushpet.com/" class="">
+                <i class="am-header-icon am-icon-home"><img src="{dede:global.cfg_templets_skin/}/images/logo.png"></i>
+          </a>
+      </div>
+
+      <h1 class="am-header-title">
+          <a href="#title-link" class="">
+            雅适宠物用品
+          </a>
+      </h1>
+
+      <div class="am-header-right am-header-nav ">
+          <a href="#sidebar" class="am-menu-toggle " data-am-offcanvas>
+                <i class="am-header-icon am-icon-bars"></i>
+          </a>
+            <div class="am-u-md-3 am-menu-offcanvas1  am-u-md-pull-9 my-sidebar am-no-layout">
+    <div class="am-offcanvas" id="sidebar">
+      {dede:include filename="head.htm"/}
+    </div>
+  </div>
+
+      </div>
+  </header>
+<!-- 雅适课堂内容 -->
+
+<div style="width:100%;z-index: 2;width: 100%;display:inline-block;">
+<div class="about-p am-figure-defaul">
+    <div class="fw">
+      <p class="title">{dede:field.title/}</p>
+      <p class="subtitle">原创：王皮皮  {dede:field.pubdate function="MyDate('Y-m-d',@me)"/}</p>
+    </div>
+    <div class="fw postbody" style="width:100% !important;"> {dede:field.body/}</div>
+<!--相关-->
+<div>
+<div class="com-text animate fadeInRight animated" data-animate="fadeInRight" data-duration="0.5s" data-delay="0.2s" style="padding: 10px; text-align: left; animation-duration: 0.5s; animation-delay: 0.2s; visibility: visible; padding:0;">
+<div class="bottom-line"></div>
+<h2 style=" font-size:1.5rem;">相关阅读</h2>
+  </div>
+<ul class="article-rec">
+{dede:likeart row=6 titlelen=40}
+ <li><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></li>
+{/dede:likeart}
+</ul>
+</div>
+    
+
+
+</div>
+</div>
+
+
+ <div class="am-figure-default" style="color: #999999;font-size: 1rem ;background:#000; color: #fff; margin:0; text-align: center; height:50px;  line-height:18px; ">
+ <hr data-am-widget="divider" style="" class="am-divider am-divider-dotted" />
+ <p >©青岛雅适宠物用品有限公司版权所有 鲁ICP备18012066号</p>
+ </div>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/amazeui.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/handlebars.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/amazeui.widgets.helper.js"></script>
+<script>
+  $(function() {
+    var $slider = $('#demo-slider-0');
+    var counter = 0;
+    var getSlide = function() {
+      counter++;
+      return '<li><img src="http://s.amazeui.org/media/i/demos/bing-' +
+        (Math.floor(Math.random() * 4) + 1) + '.jpg" />' +
+        '<div class="am-slider-desc">动态插入的 slide ' + counter + '</div></li>';
+    };
+
+    $('.js-demo-slider-btn').on('click', function() {
+      var action = this.getAttribute('data-action');
+      if (action === 'add') {
+        $slider.flexslider('addSlide', getSlide());
+      } else {
+        var count = $slider.flexslider('count');
+        count > 1 && $slider.flexslider('removeSlide', $slider.flexslider('count') - 1);
+      }
+    });
+
+  });
+</script>
+<script language='javascript'>
+	function ImgReSize(e)
+		{
+		if(e.width>100%) // 670可根据你文章的内容区域大小，可调整
+		{
+		e.width=100%; // 等同上面你设的那个数值
+		e.style.width="";
+		}
+		if(e.height>10)
+		{
+		e.style.height="";
+		}
+	}
+</script> 
+
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://cdn.amazeui.org/amazeui/2.5.0/js/amazeui.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+
+<head>
+
+<title>网站地图/{dede:global.cfg_webname/}</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+
+<body>
+
+<a href="{dede:global.cfg_indexurl/}">返回首页</a>
+
+<br />
+
+----------------------栏目列表----------------------
+
+{dede:global name='maplist'/}
+
+----------------------文章列表----------------------
+
+<ul>
+
+{dede:arclist typeid='' orderby=’pubdate’ row='999999' }
+
+<li><a href="[field:arcurl/]">[field:title/]</a></li>
+
+{/dede:arclist}
+
+</ul>
+
+</body>
+
+</html> 

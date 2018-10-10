@@ -1,0 +1,109 @@
+﻿<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{dede:field.seotitle /}</title>
+<meta name="Keywords" Content="{dede:field.keywords/}">
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="stylesheet" href="http://www.yushpet.com/templets/h5/css/amazeui.min.css">
+  <link rel="stylesheet" href="http://www.yushpet.com/templets/h5/css/app.css">
+  <link rel="stylesheet" href="http://www.yushpet.com/templets/h5/fonts/iconfont.css">
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 不提供支持。 请 <a
+  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+  <header data-am-sticky data-am-widget="header"
+          class="am-header am-header-default">
+      <div class="am-header-left am-header-nav">
+          <a href="index.html" class="">
+                <i class="am-header-icon am-icon-home"><img src="http://www.yushpet.com/templets/h5/images/logo.png"></i>
+          </a>
+      </div>
+
+      <h1 class="am-header-title">
+          <a href="#title-link" class="">
+            雅适宠物用品
+          </a>
+      </h1>
+
+      <div class="am-header-right am-header-nav ">
+          <a href="#sidebar" class="am-menu-toggle " data-am-offcanvas>
+                <i class="am-header-icon am-icon-bars"></i>
+          </a>
+            <div class="am-u-md-3 am-menu-offcanvas1  am-u-md-pull-9 my-sidebar am-no-layout">
+    <div class="am-offcanvas" id="sidebar">
+    {dede:include filename="head.htm"/}
+    </div>
+  </div>
+
+      </div>
+  </header>
+  <div class="com-text animate" data-animate="fadeInRight" data-duration="0.5s" data-delay="0.2s">
+<h2 title="雅适宠物课堂，怎么养猫，猫**怎么办">雅适课堂</h2>
+    <p>yush Classroom</p>
+  </div>
+<!-- 雅适课堂 -->
+ <div class="am-article-bd am-figure-default" style="text-align:center">
+<div class="newstitem " style="visibility: visible;">
+
+		{dede:list pagesize='10'}
+          <div class="news_wrapper">
+            <div class="newsbody">
+              <p class="title"><a href="[field:arcurl/]" >[field:title/]</a></p>
+               <p class="date">[field:pubdate function='strftime("%m-%d",@me)'/] [field:pubdate function='strftime("%Y",@me)'/]</p>
+            </div>
+             <a href="[field:arcurl/]" ><img class="newsimg" src="[field:litpic/]"/></a>
+          </div>
+		{/dede:list}  
+		         <!-- pages-->
+        <div id="pages">
+    {dede:pagelist listitem="pre,next,pageno" listsize="list_size"/}
+    </div>
+        </div>
+ </div>
+
+
+<!-- 返回顶部 -->
+ <div class="am-figure-default" style="color: #999999;font-size: 1rem ;background:#000; color: #fff; margin:0; text-align: center; height:50px;  line-height:18px; ">
+ <hr data-am-widget="divider" style="" class="am-divider am-divider-dotted" />
+ <p >©青岛雅适宠物用品有限公司版权所有 鲁ICP备18012066号</p>
+ </div>
+<script src="http://www.yushpet.com/templets/h5/js/jquery.min.js"></script>
+<script src="http://www.yushpet.com/templets/h5/js/amazeui.js"></script>
+<script src="http://www.yushpet.com/templets/h5/js/handlebars.min.js"></script>
+<script src="http://www.yushpet.com/templets/h5/js/amazeui.widgets.helper.js"></script>
+<script>
+  $(function() {
+    var $slider = $('#demo-slider-0');
+    var counter = 0;
+    var getSlide = function() {
+      counter++;
+      return '<li><img src="http://s.amazeui.org/media/i/demos/bing-' +
+        (Math.floor(Math.random() * 4) + 1) + '.jpg" />' +
+        '<div class="am-slider-desc">动态插入的 slide ' + counter + '</div></li>';
+    };
+
+    $('.js-demo-slider-btn').on('click', function() {
+      var action = this.getAttribute('data-action');
+      if (action === 'add') {
+        $slider.flexslider('addSlide', getSlide());
+      } else {
+        var count = $slider.flexslider('count');
+        count > 1 && $slider.flexslider('removeSlide', $slider.flexslider('count') - 1);
+      }
+    });
+
+  });
+</script>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://cdn.amazeui.org/amazeui/2.5.0/js/amazeui.min.js"></script>
+</body>
+</html>

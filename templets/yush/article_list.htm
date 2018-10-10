@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="http://www.yushpet.com/templets/yush/js/redirect.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="Keywords" Content="{dede:field.keywords/}">
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel="stylesheet" type="text/css" href="http://www.yushpet.com/templets/yush/css/style.css"  />
+<link rel="stylesheet" type="text/css" href="http://www.yushpet.com/templets/yush/css/animate.min.css">
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}font/iconfont.css">
+<!-- <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script> -->
+
+<style type="text/css">
+        .icon {
+          /* 通过设置 font-size 来改变图标大小 */
+          width: 1em; height: 1em;
+          /* 图标和文字相邻时，垂直对齐 */
+          vertical-align: -0.15em;
+          /* 通过设置 color 来改变 SVG 的颜色/fill */
+          fill: currentColor;
+          /* path 和 stroke 溢出 viewBox 部分在 IE 下会显示
+             normalize.css 中也包含这行 */
+          overflow: hidden;
+        }
+
+</style>
+
+
+</head>
+<body class="dowebok"><script src="http://www.yushpet.com/templets/yush/demos/googlegg.js"></script>
+{dede:include filename="head.htm"/}
+<!-- <div class="cooper-banenr" style="background-image:url('images/lianxi.png')" ></div> -->
+</div>
+</div>
+
+<!--头部结束-->
+
+<!-- 雅适课堂 -->
+
+<div style="width:100%;z-index: 2;padding-top:120px;width: 100%;display:inline-block;" title="怎么养猫，猫砂选择，猫粮选择">
+<div class="position_map"><strong>当前位置:</strong> {dede:field name='position'/}《{dede:field.title/} 》</div>
+<div class="about-p con-wrap"  style="margin: 0 auto;">
+    <div class="fw">
+      <h2 class="title" title="{dede:field.title/}">{dede:field.title/}</h2>
+      <p class="subtitle"><span>更新时间：{dede:field.pubdate function="MyDate('Y-m-d',@me)"/}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>作者：雅适猫粮王皮皮</span></p>
+    </div>
+<!--正文开始-->	
+    <div class="fw postbody">
+	  {dede:field.body/}
+   </div>
+   
+<!--正文结束-->
+<div>
+<div class="com-text animate fadeInRight animated" data-animate="fadeInRight" data-duration="0.5s" data-delay="0.2s" style="padding: 10px; text-align: left; animation-duration: 0.5s; animation-delay: 0.2s; visibility: visible; padding:0;">
+<div class="bottom-line"></div>
+<div style=" font-size:1.5rem;">相关阅读</div>
+  </div>
+<ul class="article-rec" title="如何养猫，怎么养猫，猫粮怎么选择，猫砂怎么选择……">
+{dede:likeart row=6 titlelen=40}
+  <li><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></li>
+{/dede:likeart}
+
+</ul>
+</div>
+
+<a href=""></a>
+
+
+
+
+</div>
+</div>
+
+
+{dede:include filename="footer.htm"/}

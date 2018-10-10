@@ -1,0 +1,11 @@
+
+# robots.txt generated at http://tool.chinaz.com/robots/ 
+User-agent: *
+Disallow: /plus/
+Disallow: /templets/
+Disallow: /include/
+Disallow: /data/
+Disallow: /liuqin/
+Sitemap: http://yushpet.com/sitemap.xml
+Sitemap: http://yushpet.com/sitemap.html
+Sitemap: http://yushpet.com/baidumap.xml
