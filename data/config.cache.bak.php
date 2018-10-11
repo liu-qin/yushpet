@@ -1,7 +1,7 @@
 <?php
-$cfg_basehost = 'http://www.yushpet.com';
+$cfg_basehost = 'http://localhost';
 $cfg_cmspath = '';
-$cfg_cookie_encode = 'ir5wMyG0oLEViEs5nVNgvoxmGc6g8oq';
+$cfg_cookie_encode = 'VXbdpH9EvcgM34xtA47m2vCW4Lin6Ur';
 $cfg_indexurl = '/';
 $cfg_backup_dir = 'backupdata';
 $cfg_indexname = '主页';

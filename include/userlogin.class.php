@@ -8,11 +8,6 @@
  * @license        http://help.dedecms.com/usersguide/license.html
  * @link           http://www.dedecms.com
  */
-function session_register()  
-{ 
-return true; 
-}  
- 
 session_start();
 
 /**

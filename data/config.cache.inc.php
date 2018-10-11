@@ -1,7 +1,7 @@
 <?php
 $cfg_disable_funs = 'phpinfo,eval,exec,passthru,shell_exec,system,proc_open,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source,file_put_contents';
 $cfg_disable_tags = 'php';
-$cfg_basehost = 'http://www.yushpet.com';
+$cfg_basehost = 'http://localhost';
 $cfg_cmspath = '';
 $cfg_cookie_encode = 'VXbdpH9EvcgM34xtA47m2vCW4Lin6Ur';
 $cfg_indexurl = '/';
@@ -89,7 +89,7 @@ $cfg_search_max = 50000;
 $cfg_search_maxrc = 300;
 $cfg_search_time = 3;
 $cfg_baidunews_limit = '100';
-$cfg_updateperi = '255';
+$cfg_updateperi = '15';
 $cfg_sendmail_bysmtp = 'Y';
 $cfg_smtp_server = 'smtp.qq.com';
 $cfg_smtp_port = '25';
@@ -156,8 +156,8 @@ $cfg_digg_update = 0;
 $cfg_feedback_guest = 'N';
 $pc = 'yush';
 $m = 'h5';
-$wapurl = 'http://www.yushpet.com/m/';
-$sqm = '51068mm36797573687065742e636f6d31353339323235363630786185e';
+$wapurl = 'http://localhost/m';
+$sqm = '';
 $canshu = '';
-$jiance = '10';
+$jiance = '';
 ?>
