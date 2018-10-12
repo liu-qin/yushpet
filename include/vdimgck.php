@@ -164,17 +164,16 @@ function echo_validate_image( $config = array() )
     //输出特定类型的图片格式，优先级为 gif -> jpg ->png
     //dump(function_exists("imagejpeg"));
     
-/*     if(function_exists("imagejpeg"))
+    if(function_exists("imagejpeg"))
     {
         header("content-type:image/jpeg\r\n");
-        imagejpeg($im);
+        // imagejpeg($im);
     }
     else
     {
         header("content-type:image/png\r\n");
-        imagepng($im);
+        // imagepng($im);
     }
     imagedestroy($im);
     exit();
-	*/
 }
