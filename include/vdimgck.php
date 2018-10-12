@@ -176,5 +176,5 @@ function echo_validate_image( $config = array() )
     }
     imagedestroy($im);
     exit();
+	*/
 }
- */
