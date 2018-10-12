@@ -166,12 +166,12 @@ function echo_validate_image( $config = array() )
     
     if(function_exists("imagejpeg"))
     {
-        header("content-type:image/jpeg\r\n");
+        //header("content-type:image/jpeg\r\n");
         // imagejpeg($im);
     }
     else
     {
-        header("content-type:image/png\r\n");
+        //header("content-type:image/png\r\n");
         // imagepng($im);
     }
     imagedestroy($im);
