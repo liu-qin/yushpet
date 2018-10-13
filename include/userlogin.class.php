@@ -9,7 +9,7 @@
  * @link           http://www.dedecms.com
  */
 //ini_set('session.save_handler', 'files'); 
-session_start();
+//session_start();
 
 /**
  *  检验用户是否有权使用某功能,这个函数是一个回值函数
