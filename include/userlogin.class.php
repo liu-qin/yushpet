@@ -8,8 +8,7 @@
  * @license        http://help.dedecms.com/usersguide/license.html
  * @link           http://www.dedecms.com
  */
-//ini_set('session.save_handler', 'files'); 
-//session_start();
+session_start();
 
 /**
  *  检验用户是否有权使用某功能,这个函数是一个回值函数
@@ -279,28 +278,33 @@ class userLogin
      * @access    public
      * @return    int    成功返回 1 ，失败返回 -1
      */
-function keepUser()
+    function keepUser()
     {
         if($this->userID != '' && $this->userType != '')
         {
-		global $admincachefile,$adminstyle;
-		if(empty($adminstyle)) $adminstyle = ‘dedecms’;//@session_register($this->keepUserIDTag);
-		$_SESSION[$this->keepUserIDTag] = $this->keepUserIDTag;
-		$_SESSION[$this->keepUserIDTag] = $this->userID;//@session_register($this->keepUserTypeTag);
-		$_SESSION[$this->keepUserTypeTag] = $this->keepUserTypeTag;
-		$_SESSION[$this->keepUserTypeTag] = $this->userType;
-		// @session_register($this->keepUserChannelTag);
-		$_SESSION[$this->keepUserChannelTag] = $this->keepUserChannelTag;
-		$_SESSION[$this->keepUserChannelTag] = $this->userChannel;//@session_register($this->keepUserNameTag);
-		$_SESSION[$this->keepUserNameTag] = $this->keepUserNameTag;
-		$_SESSION[$this->keepUserNameTag] = $this->userName;//@session_register($this->keepUserPurviewTag);
-		$_SESSION[$this->keepUserPurviewTag] = $this->keepUserPurviewTag;
-		$_SESSION[$this->keepUserPurviewTag] = $this->userPurview;
-		// @session_register($this->keepAdminStyleTag);
-		$_SESSION[$this->keepAdminStyleTag] = $this->keepAdminStyleTag;
-		$_SESSION[$this->keepAdminStyleTag] = $adminstyle;
-		PutCookie(‘DedeUserID’, $this->userID, 3600 * 24, ‘/’);
-		PutCookie(‘DedeLoginTime’, time(), 3600 * 24, ‘/’);
+            global $admincachefile,$adminstyle;
+            if(empty($adminstyle)) $adminstyle = 'dedecms';
+
+            @session_register($this->keepUserIDTag);
+            $_SESSION[$this->keepUserIDTag] = $this->userID;
+
+            @session_register($this->keepUserTypeTag);
+            $_SESSION[$this->keepUserTypeTag] = $this->userType;
+
+            @session_register($this->keepUserChannelTag);
+            $_SESSION[$this->keepUserChannelTag] = $this->userChannel;
+
+            @session_register($this->keepUserNameTag);
+            $_SESSION[$this->keepUserNameTag] = $this->userName;
+
+            @session_register($this->keepUserPurviewTag);
+            $_SESSION[$this->keepUserPurviewTag] = $this->userPurview;
+
+            @session_register($this->keepAdminStyleTag);
+            $_SESSION[$this->keepAdminStyleTag] = $adminstyle;
+
+            PutCookie('DedeUserID', $this->userID, 3600 * 24, '/');
+            PutCookie('DedeLoginTime', time(), 3600 * 24, '/');
             
             $this->ReWriteAdminChannel();
             
@@ -311,7 +315,7 @@ function keepUser()
             return -1;
         }
     }
-		
+    
     /**
      *  重写用户权限频道
      *

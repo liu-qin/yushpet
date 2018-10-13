@@ -1,8 +1,8 @@
 <?php
 $cfg_basehost = 'http://localhost';
-$cfg_cmspath = '';
-$cfg_cookie_encode = 'VXbdpH9EvcgM34xtA47m2vCW4Lin6Ur';
-$cfg_indexurl = '/';
+$cfg_cmspath = '/yushpet';
+$cfg_cookie_encode = 'Tlr8wcOWgdTouxmbExtSwPR3rWqa4E1S';
+$cfg_indexurl = '/yushpet';
 $cfg_backup_dir = 'backupdata';
 $cfg_indexname = '主页';
 $cfg_webname = '我的网站';
