@@ -8,6 +8,7 @@
  * @license        http://help.dedecms.com/usersguide/license.html
  * @link           http://www.dedecms.com
  */
+//ini_set('session.save_handler', 'files'); 
 session_start();
 
 /**
