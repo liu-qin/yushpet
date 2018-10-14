@@ -8,7 +8,7 @@
  * @license        http://help.dedecms.com/usersguide/license.html
  * @link           http://www.dedecms.com
  */
-@session_start();
+session_start();
 
 /**
  *  检验用户是否有权使用某功能,这个函数是一个回值函数
