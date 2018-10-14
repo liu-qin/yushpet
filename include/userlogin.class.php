@@ -8,8 +8,6 @@
  * @license        http://help.dedecms.com/usersguide/license.html
  * @link           http://www.dedecms.com
  */
-if(!is_dir(’./tmp/’))mkdir (’./tmp/’, 0700);
-    session_save_path(’./tmp/’); 
 session_start();
 
 /**
