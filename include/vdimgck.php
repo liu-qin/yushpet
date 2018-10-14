@@ -20,10 +20,10 @@ $config = array(
     'font_file'   => dirname(__FILE__).'/data/fonts/ggbi.ttf',
     'wordlist_file'   => dirname(__FILE__).'/data/words/words.txt',
     'filter_type' => 5);
-$sessSavePath = "tcp://127.0.0.1:11211" ;
+$sessSavePath = DEDEDATA."/sessions/";
 
 // Session保存路径
-if(is_writeable($sessSavePath) && is_readable($sessSavePath)){ session_save_path($sessSavePath); }
+if(ini_get('session.save_handler') === 'files' && is_writeable($sessSavePath) && is_readable($sessSavePath)) 
 if(!empty($cfg_domain_cookie)) session_set_cookie_params(0,'/',$cfg_domain_cookie);
 
 if (!echo_validate_image($config))
