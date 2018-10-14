@@ -131,7 +131,7 @@ $sessSavePath = DEDEDATA."/sessions/";
 if(ini_get('session.save_handler') === 'files' && is_writeable($sessSavePath) && is_readable($sessSavePath)) 
 {
     session_save_path($sessSavePath);
-}
+}；
 
 //系统配置参数
 require_once(DEDEDATA."/config.cache.inc.php");

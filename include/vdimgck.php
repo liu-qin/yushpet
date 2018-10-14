@@ -24,6 +24,10 @@ $sessSavePath = DEDEDATA."/sessions/";
 
 // Session保存路径
 if(ini_get('session.save_handler') === 'files' && is_writeable($sessSavePath) && is_readable($sessSavePath)) 
+{
+    session_save_path($sessSavePath);
+}；
+	
 if(!empty($cfg_domain_cookie)) session_set_cookie_params(0,'/',$cfg_domain_cookie);
 
 if (!echo_validate_image($config))
