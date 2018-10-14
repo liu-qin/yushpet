@@ -128,8 +128,7 @@ if( preg_match('/windows/i', @getenv('OS')) )
 
 //Session保存路径
 $sessSavePath = DEDEDATA."/sessions/";
-
-if(ini_get('session.save_handler') === 'files' && is_writeable($sessSavePath) && is_readable($sessSavePath)) 
+if(is_writeable($sessSavePath) && is_readable($sessSavePath))
 {
     session_save_path($sessSavePath);
 }
