@@ -20,7 +20,7 @@ $config = array(
     'font_file'   => dirname(__FILE__).'/data/fonts/ggbi.ttf',
     'wordlist_file'   => dirname(__FILE__).'/data/words/words.txt',
     'filter_type' => 5);
-$sessSavePath = DEDEDATA."/sessions/";
+$sessSavePath = "tcp://127.0.0.1:11211" ;
 
 // Session保存路径
 if(is_writeable($sessSavePath) && is_readable($sessSavePath)){ session_save_path($sessSavePath); }
