@@ -238,6 +238,20 @@ class Archives
             //设置全局环境变量
             $this->Fields['typename'] = $this->TypeLink->TypeInfos['typename'];
             @SetSysEnv($this->Fields['typeid'],$this->Fields['typename'],$this->Fields['id'],$this->Fields['title'],'archives');
+			//替换图片Alt为文档标题
+
+			$this->Fields['body'] = str_ireplace(array('alt=""','alt=\'\''),'',$this->Fields['body']);
+			$this->Fields['body'] = preg_replace("@ [\s]{0,}alt[\s]{0,}=[\"'\s]{0,}[\s\S]{0,}[\"'\s]
+			@isU"," ",$this->Fields['body']);
+			$this->Fields['body'] = str_ireplace("<img " ,"<img alt=\"".$this->Fields['title']."\"
+			",$this->Fields['body']);
+
+			//img标签中加入超宽缩小JS调用代码
+
+			$suolue='onload="javascript:ImgReSize(this)"';
+			$this->Fields['body'] = str_ireplace("<img " ,"<img ".$suolue." ",$this->Fields['body']);
+			//屏蔽height属性
+			$this->Fields['body'] = preg_replace('/<img(.+?)height=(.+?) (.+?)>/i',"<img$1$3>",$this->Fields['body']); 
         }
         //完成附加表信息读取
         unset($row);

@@ -1,1 +1,0 @@
-<a href="[field:typeurl/]" class="active" title="[field:typename/]_雅适宠物用品" >[field:typename/]</a>

@@ -1,1 +1,0 @@
-<a href="[field:typeurl/]" title="[field:typename/]_猫粮，猫砂">[field:typename/]</a>
