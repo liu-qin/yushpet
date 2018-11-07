@@ -71,11 +71,7 @@ function _RunMagicQuotes(&$svar)
         }
         else
         {
-<<<<<<< HEAD
-            if( strlen($svar)>0 && preg_match('#^(cfg_|GLOBALS|_GET|_POST|_COOKIE|_SESSION)#',$svar) )
-=======
             if( strlen($svar)>0 && preg_match('#^((cfg_|GLOBALS|_GET|_POST|_COOKIE|_SESSION)#',$svar) )
->>>>>>> 79f3f4539de4ce357cb8acf8abd04559daee6d79
             {
               exit('Request var not allow!');
             }
@@ -132,7 +128,7 @@ if( preg_match('/windows/i', @getenv('OS')) )
 
 //Session保存路径
 $sessSavePath = DEDEDATA."/sessions/";
-if(ini_get('session.save_handler') === 'files' && is_writeable($sessSavePath) && is_readable($sessSavePath)) 
+if(is_writeable($sessSavePath) && is_readable($sessSavePath))
 {
     session_save_path($sessSavePath);
 }
