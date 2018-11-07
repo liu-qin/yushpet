@@ -71,7 +71,11 @@ function _RunMagicQuotes(&$svar)
         }
         else
         {
+<<<<<<< HEAD
             if( strlen($svar)>0 && preg_match('#^(cfg_|GLOBALS|_GET|_POST|_COOKIE|_SESSION)#',$svar) )
+=======
+            if( strlen($svar)>0 && preg_match('#^((cfg_|GLOBALS|_GET|_POST|_COOKIE|_SESSION)#',$svar) )
+>>>>>>> 79f3f4539de4ce357cb8acf8abd04559daee6d79
             {
               exit('Request var not allow!');
             }
@@ -93,7 +97,7 @@ if (!defined('DEDEREQUEST'))
             }
         } else
         {
-            if( strlen($val)>0 && preg_match('#^(cfg_|GLOBALS|_GET|_POST|_COOKIE)#',$val)  )
+            if( strlen($val)>0 && preg_match('#^((cfg_|GLOBALS|_GET|_POST|_COOKIE|_SESSION)#',$val)  )
             {
                 exit('Request var not allow!');
             }
