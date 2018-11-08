@@ -1,5 +1,5 @@
 <script>
-　　//判断是否手机端访问
+　　//判断是否手机端访问z
     var userAgentInfo = navigator.userAgent.toLowerCase();
     var Agents = ["android", "iphone",
                 "symbianos", "windows phone",
