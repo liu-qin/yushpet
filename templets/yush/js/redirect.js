@@ -1,4 +1,4 @@
-<script>
+
 　　//判断是否手机端访问z
     var userAgentInfo = navigator.userAgent.toLowerCase();
     var Agents = ["android", "iphone",
@@ -11,4 +11,3 @@
             this.location.href='http://m.yushpet.com/index.html';  //wap端地址
         }
     }
-</script>
