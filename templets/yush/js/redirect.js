@@ -1,2 +1,2 @@
 if(navigator.platform.indexOf('Win32')!=-1){}
-else{window.location.href="{dede:global.wapurl/}"+window.location.pathname;}
+else{window.location.href="http://m.yushpet.com/m/index.html";}
