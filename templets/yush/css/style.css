@@ -490,7 +490,7 @@ display: -webkit-box;  /* 老版本语法: Safari,  iOS, Android browser, older 
 .wrapper{width:90%; margin: 0 auto;height: auto;overflow: hidden;}
 .newstitem { height: auto; margin: 0px auto;  padding: 15px 0px;}
 .newsbody{width:65%;min-width: calc(100% - 270px );float: right}
-.newsimg{width:32%;max-width: 250px; float: left}
+.newsimg{ max-width: 250px; }
 .newsimg img{width:100%;}
 .news_wrapper .{width:60%;float: right}
 .newstitem p.date .year {font-size:22px;font-weight:100;position: relative;  font-weight: 300;color: #999;float: left; }
@@ -547,4 +547,4 @@ display: -webkit-box;  /* 老版本语法: Safari,  iOS, Android browser, older 
 .ayingchang{width: 240px;
     height: 140px;
     display: -webkit-box;
-    float: left;}
+    float: left; overflow: hidden;}
