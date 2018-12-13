@@ -544,3 +544,7 @@ display: -webkit-box;  /* 老版本语法: Safari,  iOS, Android browser, older 
     display:inherit;
    }
 .class_news{margin-top: -20px;}
+.ayingchang{width: 240px;
+    height: 160px;
+    display: -webkit-box;
+    float: left;}
