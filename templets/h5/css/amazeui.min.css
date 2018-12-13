@@ -137,7 +137,7 @@ table.am-hide-md,table.am-hide-md-down,table.am-hide-md-only,table.am-hide-sm,ta
 /*雅适课堂*/
 .wrapper{width:70%; margin: 0 auto;height: auto;overflow: hidden;}
 .newstitem {   height: auto; margin: 0px 0px;  padding:3px 0px;}
-.newsbody{max-width: calc(100% - 116px);width: calc(100% - 24% - 10px);float: right; text-align: left}
+.newsbody{max-width: calc(100% - 116px);width: calc(100vw - 30vw - 10px);float: right; text-align: left}
 .newsimg{width:24%;min-width: 106px; float: left}
 .newsimg img{width:100%;}
 .date{ width:100%;line-height: 30px; font-weight:100;}
