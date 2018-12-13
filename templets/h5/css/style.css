@@ -492,7 +492,7 @@ display: -webkit-box;  /* 老版本语法: Safari,  iOS, Android browser, older 
 .newsbody{width:65%;min-width: calc(100% - 270px );float: right}
 .newsimg{width:32%;max-width: 250px; float: left}
 .newsimg img{width:100%;}
-.news_wrapper .{width:60%;float: right}
+.news_wrapper {width:60%;float: right}
 .newstitem p.date .year {font-size:22px;font-weight:100;position: relative;  font-weight: 300;color: #999;float: left; }
 .newstitem .md {color: #BDBDBD; display: inline-block;font-size: 16px; padding: 0 15px 0 40px;position: relative;}
 .date{ width:100%;line-height: 30px; font-weight:100;}
